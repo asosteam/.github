@@ -1,0 +1,70 @@
+name: "Tech Debt"
+description: "Structured technical debt record"
+title: "[Tech Debt]: "
+labels: ["tech-debt"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Title / Summary
+      description: Short description of the technical debt item
+      placeholder: e.g. This service has its own upload management system
+    validations:
+      required: true
+
+  - type: textarea
+    id: cause
+    attributes:
+      label: Cause
+      description: Why does this debt exist?
+      placeholder: Explain how this situation came about
+    validations:
+      required: true
+
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences
+      description: What problems does this create?
+      placeholder: Inconsistent architecture, operational issues, support burden etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact of Debt
+      description: Business and operational impact
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Effort to Pay Down
+      description: Estimated effort to remediate
+      options:
+        - Low
+        - Medium
+        - High
+        - Very High
+    validations:
+      required: true
+
+  - type: dropdown
+    id: overall
+    attributes:
+      label: Overall Rating
+      description: Combined view of impact and effort
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
