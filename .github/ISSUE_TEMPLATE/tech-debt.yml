@@ -8,7 +8,7 @@ body:
     attributes:
       label: Title / Summary
       description: Short description of the technical debt item
-      placeholder: e.g. Whitehall has its own upload management system
+      placeholder: e.g. This service has its own upload management system
     validations:
       required: true
 
